@@ -34,8 +34,7 @@ class Create_pet(unittest.TestCase):
 
         response = requests.post(self.url, json=payload, headers=headers)
 
-        # Print the response
-        print(response.status_code)
+        assert response.status_code == 200
         print(response.text)
 
     def test_create_user(self):
@@ -52,8 +51,7 @@ class Create_pet(unittest.TestCase):
 
         response = requests.post(self.url, json=payload)
 
-        # Print the response
-        print(response.status_code)
+        assert response.status_code == 200
         print(response.text)
 
 
